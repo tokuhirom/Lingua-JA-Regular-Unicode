@@ -30,3 +30,11 @@ kazeburo
 daisuke
 maki
 TODO
+HANKAKU
+HIRAGANA
+KATAKANA
+ZENKAKU
+hiragana
+japanese
+katakana
+regularizer
