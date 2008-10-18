@@ -1,6 +1,9 @@
 use warnings;
 use strict;
 use Perl6::Say;
+use Encode::JP::H2Z;
+use Encode;
+use Data::Dumper;
 
 my @d = split /\n/, do "unicore/Name.pl";
 my %n2h;
@@ -82,7 +85,39 @@ sub katakana2hiragana {
     return "tr/", join('', @katakana2hiragana_k), "/", join('', @katakana2hiragana_h), "/";
 }
 
-for my $meth (qw/alnum_z2h hiragana2katakana katakana2hiragana/) {
+sub hankata2zenkata {
+    my $c = sub { sprintf "\\x{%X}", unpack 'U*', decode('euc-jp', shift) };
+
+    my @res;
+
+    push @res, sub {
+        # dakuten
+        my (@h, %h2z);
+        while (my ($h, $z) = each %Encode::JP::H2Z::_D2Z) {
+            my $hhex = join('', map { sprintf '\x{%X}', unpack 'U*', $_ } split //, decode('euc-jp', $h));
+            push @h, $hhex;
+            $h2z{$hhex} = $c->($z);
+        }
+        return join("\n",
+            Dumper(\%h2z),
+            join('', "s/(", join('|', @h), ')/$h2z{$1}/ge;'),
+        );
+    }->();
+
+    push @res, sub {
+        # normal
+        my (@h, @z);
+        while (my ($h, $z) = each %Encode::JP::H2Z::_H2Z) {
+            push @h, $c->($h);
+            push @z, $c->($z);
+        }
+        return join('', "tr/", join('', @h), "/", join('', @z), "/;");
+    }->();
+
+    return join "\n", @res;
+}
+
+for my $meth (qw/alnum_z2h hiragana2katakana katakana2hiragana hankata2zenkata/) {
     say "-- $meth";
     say sub { goto &{$meth} }->();
 }
