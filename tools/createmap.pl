@@ -85,7 +85,7 @@ sub katakana2hiragana {
     return "tr/", join('', @katakana2hiragana_k), "/", join('', @katakana2hiragana_h), "/";
 }
 
-sub hankata2zenkata {
+sub katakana_h2z {
     my $c = sub { sprintf "\\x{%X}", unpack 'U*', decode('euc-jp', shift) };
 
     my @res;
@@ -117,7 +117,39 @@ sub hankata2zenkata {
     return join "\n", @res;
 }
 
-for my $meth (qw/alnum_z2h hiragana2katakana katakana2hiragana hankata2zenkata/) {
+sub katakana_z2h {
+    my $c = sub { sprintf "\\x{%X}", unpack 'U*', decode('euc-jp', shift) };
+
+    my @res;
+
+    push @res, sub {
+        # dakuten
+        my (@z, %z2h);
+        while (my ($h, $z) = each %Encode::JP::H2Z::_D2Z) {
+            my $hhex = join('', map { sprintf '\x{%X}', unpack 'U*', $_ } split //, decode('euc-jp', $h));
+            push @z, $c->($z);
+            $z2h{$c->($z)} = $hhex;
+        }
+        return join("\n",
+            Dumper(\%z2h),
+            join('', "s/(", join('|', @z), ')/$z2h{$1}/ge;'),
+        );
+    }->();
+
+    push @res, sub {
+        # normal
+        my (@h, @z);
+        while (my ($h, $z) = each %Encode::JP::H2Z::_H2Z) {
+            push @z, $c->($z);
+            push @h, $c->($h);
+        }
+        return join('', "tr/", join('', @z), "/", join('', @h), "/;");
+    }->();
+
+    return join "\n", @res;
+}
+
+for my $meth (qw/alnum_z2h hiragana2katakana katakana2hiragana katakana_h2z katakana_z2h/) {
     say "-- $meth";
     say sub { goto &{$meth} }->();
 }

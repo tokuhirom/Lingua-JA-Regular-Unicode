@@ -38,3 +38,4 @@ hiragana
 japanese
 katakana
 regularizer
+katakanas
