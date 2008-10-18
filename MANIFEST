@@ -26,6 +26,9 @@ t/00_compile.t
 t/01_alnum_z2h.t
 t/02_hiragana2katakana.t
 t/03_space_z2h.t
+t/04_katakana2hiragana.t
+t/05_katakana_h2z.t
+t/06_katakana_z2h.t
 xt/01_podspell.t
 xt/02_perlcritic.t
 xt/03_pod.t
