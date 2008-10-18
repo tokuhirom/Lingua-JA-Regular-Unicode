@@ -1,5 +1,11 @@
 Revision history for Perl extension Lingua::JA::Regular::Unicode
 
+0.01_02
+
+        - added katakana_z2h
+        - added katakana_h2z
+        - added katakana2hiragana
+
 0.01_01  Fri Oct 17 16:35:25 2008
         - development release
 
