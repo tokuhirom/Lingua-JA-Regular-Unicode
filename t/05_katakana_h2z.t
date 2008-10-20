@@ -19,3 +19,7 @@ __END__
 --- input:    ｶﾞ
 --- expected: ガ
 
+=== middle dots
+--- input:    ・･
+--- expected: ・・
+
