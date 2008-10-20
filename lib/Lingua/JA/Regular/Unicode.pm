@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use utf8;
 use 5.00800;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 use Exporter 'import';
 
 our @EXPORT = qw/ hiragana2katakana alnum_z2h space_z2h katakana2hiragana katakana_h2z katakana_z2h space_h2z/;

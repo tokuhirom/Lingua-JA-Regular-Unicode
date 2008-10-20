@@ -1,5 +1,10 @@
 Revision history for Perl extension Lingua::JA::Regular::Unicode
 
+0.02
+
+    - added space_h2z method
+    - pinpoint optimize(thanks to abe++)
+
 0.01_02
 
         - added katakana_z2h
