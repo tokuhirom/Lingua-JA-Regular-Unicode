@@ -2,7 +2,7 @@ package Lingua::JA::Regular::Unicode;
 use strict;
 use warnings;
 use 5.00800;
-our $VERSION = '0.01_02';
+our $VERSION = '0.01';
 use Exporter 'import';
 
 our @EXPORT = qw/ hiragana2katakana alnum_z2h space_z2h katakana2hiragana katakana_h2z katakana_z2h/;
