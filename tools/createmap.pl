@@ -132,7 +132,7 @@ sub katakana_z2h {
         }
         return join("\n",
             Dumper(\%z2h),
-            join('', "s/(", join('|', @z), ')/$z2h{$1}/ge;'),
+            join('', "s/([", join('', @z), '])/$katakana_z2h_map{$1}/ge;'),
         );
     }->();
 

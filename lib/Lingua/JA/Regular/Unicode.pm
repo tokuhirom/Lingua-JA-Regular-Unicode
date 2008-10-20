@@ -1,6 +1,7 @@
 package Lingua::JA::Regular::Unicode;
 use strict;
 use warnings;
+use utf8;
 use 5.00800;
 our $VERSION = '0.01';
 use Exporter 'import';
@@ -102,7 +103,9 @@ sub katakana_h2z {
 
 sub katakana_z2h {
     local $_ = shift;
-    s/(\x{30BC}|\x{30C9}|\x{30C0}|\x{30AC}|\x{30D3}|\x{30BA}|\x{30D4}|\x{30F4}|\x{30B2}|\x{30B6}|\x{30DA}|\x{30D1}|\x{30D0}|\x{30C7}|\x{30B4}|\x{30D7}|\x{30D9}|\x{30C5}|\x{30DD}|\x{30D6}|\x{30AE}|\x{30C2}|\x{30B8}|\x{30B0}|\x{30DC}|\x{30BE})/$katakana_z2h_map{$1}/ge;;
+    # dakuten
+    s/([\x{30BC}\x{30C9}\x{30C0}\x{30AC}\x{30D3}\x{30BA}\x{30D4}\x{30F4}\x{30B2}\x{30B6}\x{30DA}\x{30D1}\x{30D0}\x{30C7}\x{30B4}\x{30D7}\x{30D9}\x{30C5}\x{30DD}\x{30D6}\x{30AE}\x{30C2}\x{30B8}\x{30B0}\x{30DC}\x{30BE}])/$katakana_z2h_map{$1}/ge;
+    # normal
     tr/\x{30E3}\x{30E9}\x{30BB}\x{30DE}\x{30C6}\x{30A7}\x{30DB}\x{30D2}\x{3002}\x{30A1}\x{30B7}\x{30CD}\x{30BF}\x{30D5}\x{30AD}\x{30E2}\x{30E1}\x{30ED}\x{30CB}\x{30E6}\x{30A5}\x{30CC}\x{30E7}\x{30E4}\x{30B3}\x{30A3}\x{30D8}\x{30C3}\x{30EF}\x{30A4}\x{30B1}\x{30CA}\x{3001}\x{300C}\x{30EC}\x{30A8}\x{309C}\x{30A2}\x{30BD}\x{30C4}\x{309B}\x{30F2}\x{30FC}\x{30F3}\x{30A6}\x{30B9}\x{30EA}\x{30AB}\x{300D}\x{30E0}\x{30A9}\x{30EB}\x{30E5}\x{30E8}\x{30CF}\x{30CE}\x{30AF}\x{30FB}\x{30AA}\x{30B5}\x{30C8}\x{30DF}\x{30C1}/\x{FF6C}\x{FF97}\x{FF7E}\x{FF8F}\x{FF83}\x{FF6A}\x{FF8E}\x{FF8B}\x{FF61}\x{FF67}\x{FF7C}\x{FF88}\x{FF80}\x{FF8C}\x{FF77}\x{FF93}\x{FF92}\x{FF9B}\x{FF86}\x{FF95}\x{FF69}\x{FF87}\x{FF6E}\x{FF94}\x{FF7A}\x{FF68}\x{FF8D}\x{FF6F}\x{FF9C}\x{FF72}\x{FF79}\x{FF85}\x{FF64}\x{FF62}\x{FF9A}\x{FF74}\x{FF9F}\x{FF71}\x{FF7F}\x{FF82}\x{FF9E}\x{FF66}\x{FF70}\x{FF9D}\x{FF73}\x{FF7D}\x{FF98}\x{FF76}\x{FF63}\x{FF91}\x{FF6B}\x{FF99}\x{FF6D}\x{FF96}\x{FF8A}\x{FF89}\x{FF78}\x{FF65}\x{FF75}\x{FF7B}\x{FF84}\x{FF90}\x{FF81}/;
     $_;
 }
