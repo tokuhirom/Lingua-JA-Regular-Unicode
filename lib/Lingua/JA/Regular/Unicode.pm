@@ -2,7 +2,7 @@ package Lingua::JA::Regular::Unicode;
 use strict;
 use warnings;
 use utf8;
-use 5.00800;
+use 5.008001; # dankogai-san says "tr/// on 5.8.0 is buggy!"
 our $VERSION = '0.02';
 use Exporter 'import';
 
@@ -203,6 +203,11 @@ This method ignores following chars:
 =head1 AUTHOR
 
 Tokuhiro Matsuno E<lt>tokuhirom AAJKLFJEF GMAIL COME<gt>
+
+=head1 THANKS To
+
+    takefumi kimura - the author of L<Lingua::JA::Regular>
+    dankogai
 
 =head1 SEE ALSO
 
