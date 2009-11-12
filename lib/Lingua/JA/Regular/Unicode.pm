@@ -148,6 +148,11 @@ Lingua::JA::Regular::Unicode is regularizer.
 
 convert alphabet and numbers ZENKAKU to HANKAKU.
 
+=item alnum_h2z
+
+convert alphabet and numbers HANKAKU to ZENKAKU.
+
+
 =item space_z2h
 
 convert spaces ZENKAKU to HANKAKU.
