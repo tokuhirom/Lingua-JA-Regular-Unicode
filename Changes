@@ -1,5 +1,9 @@
 Revision history for Perl extension Lingua::JA::Regular::Unicode
 
+0.04
+
+    - added alnum_h2z function(walf443++)
+
 0.03
 
     - this module requires perl 5.8.1.

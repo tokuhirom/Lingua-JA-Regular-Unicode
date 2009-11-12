@@ -30,6 +30,7 @@ t/04_katakana2hiragana.t
 t/05_katakana_h2z.t
 t/06_katakana_z2h.t
 t/07_space_h2z.t
+t/08_alnum_h2z.t
 xt/01_podspell.t
 xt/02_perlcritic.t
 xt/03_pod.t
