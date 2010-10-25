@@ -133,7 +133,7 @@ Lingua::JA::Regular::Unicode - convert japanese chars.
 
 =head1 SYNOPSIS
 
-    use Lingua::JA::Regular::Unicode qw/regular/;
+    use Lingua::JA::Regular::Unicode qw/alnum_z2h hiragana2katakana space_z2h/;
     alnum_z2h("Ａ１");                                        # => "A1"
     hiragana2katakana("ほげ");                                # => "ホゲ"
     space_z2h("\x{0300}");                                    # => 半角スペース
