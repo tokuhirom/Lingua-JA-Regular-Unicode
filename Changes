@@ -1,5 +1,9 @@
 Revision history for Perl extension Lingua::JA::Regular::Unicode
 
+0.05
+
+    - fixed synopsis(reported by tomita++)
+
 0.04
 
     - added alnum_h2z function(walf443++)
