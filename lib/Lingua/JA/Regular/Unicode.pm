@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use utf8;
 use 5.008001; # dankogai-san says "tr/// on 5.8.0 is buggy!"
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 use Exporter 'import';
 
 our @EXPORT = qw/ hiragana2katakana alnum_z2h alnum_h2z space_z2h katakana2hiragana katakana_h2z katakana_z2h space_h2z/;
@@ -213,7 +213,7 @@ This method ignores following chars:
 
 =head1 AUTHOR
 
-Tokuhiro Matsuno E<lt>tokuhirom AAJKLFJEF GMAIL COME<gt>
+Tokuhiro Matsuno E<lt>tokuhirom AAJKLFJEF@ GMAIL COME<gt>
 
 =head1 THANKS To
 
