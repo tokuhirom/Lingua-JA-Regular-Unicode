@@ -1,5 +1,9 @@
 Revision history for Perl extension Lingua::JA::Regular::Unicode
 
+0.07
+
+    - fixed deps
+
 0.06
 
     - modernize packaging
