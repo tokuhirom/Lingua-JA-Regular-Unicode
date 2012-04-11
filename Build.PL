@@ -7,6 +7,9 @@ my $build = Module::Build->new(
     recursive_test_files => 1,
     dynamic_config       => 0,
     build_requires       => { 'Test::More' => '0.98' },
+    test_requires        => {
+        'Test::Base' => '0'
+    },
     configure_requires   => { 'Module::Build' => '0.38' },
     requires             => {
         'perl'               => '5.008001',
