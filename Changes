@@ -1,5 +1,9 @@
 Revision history for Perl extension Lingua::JA::Regular::Unicode
 
+0.08
+
+    - fixed deps, agian
+
 0.07
 
     - fixed deps
