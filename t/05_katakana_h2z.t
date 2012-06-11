@@ -23,3 +23,6 @@ __END__
 --- input:    ・･
 --- expected: ・・
 
+===
+--- input:    ｳ
+--- expected: ウ

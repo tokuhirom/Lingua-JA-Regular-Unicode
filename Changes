@@ -1,5 +1,11 @@
 Revision history for Perl extension Lingua::JA::Regular::Unicode
 
+0.09
+
+    - bug fix on perl 5.16.0.
+      https://github.com/tokuhirom/p5-lingua-ja-regular-unicode/issues/1
+      (reported by pawa++)
+
 0.08
 
     - fixed deps, agian
