@@ -1,6 +1,6 @@
 use warnings;
 use strict;
-use Perl6::Say;
+use 5.10.0;
 use Encode::JP::H2Z;
 use Encode;
 use Data::Dumper;
