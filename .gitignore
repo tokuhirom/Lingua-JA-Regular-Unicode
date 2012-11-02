@@ -1,8 +1,4 @@
 Makefile
-
-inc/
-
-Makefile
 inc/
 ppport.h
 *.sw[po]
