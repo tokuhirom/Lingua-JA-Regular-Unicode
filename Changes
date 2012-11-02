@@ -1,5 +1,9 @@
 Revision history for Perl extension Lingua::JA::Regular::Unicode
 
+0.10
+
+    - doc enhancements
+
 0.09
 
     - bug fix on perl 5.16.0.
