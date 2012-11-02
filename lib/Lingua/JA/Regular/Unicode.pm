@@ -146,12 +146,15 @@ Lingua::JA::Regular::Unicode is regularizer.
 
 =item alnum_z2h
 
-convert alphabet and numbers ZENKAKU to HANKAKU.
+Convert alphabet, numbers and B<symbols> ZENKAKU to HANKAKU.
+
+Symbols contains B<< > >>, B<< < >>.
+
+Yes, it's bit strange. But so, this behaviour is needed by historical reason.
 
 =item alnum_h2z
 
-convert alphabet and numbers HANKAKU to ZENKAKU.
-
+Convert alphabet, numbers and B<symbols> HANKAKU to ZENKAKU.
 
 =item space_z2h
 
