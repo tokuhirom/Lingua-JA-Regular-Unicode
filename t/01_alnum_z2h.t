@@ -1,13 +1,14 @@
-use Test::Base;
 use utf8;
+use strict;
+use warnings;
 use Lingua::JA::Regular::Unicode;
+use Data::Section::TestBase;
+use Test::More;
 
-plan tests => 1*blocks;
-
-run {
-    my $block = shift;
+for my $block (blocks()) {
     is alnum_z2h($block->input), $block->expected;
 }
+done_testing;
 
 __END__
 
