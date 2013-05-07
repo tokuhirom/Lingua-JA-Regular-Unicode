@@ -1,0 +1,75 @@
+{
+   "abstract" : "convert japanese chars.",
+   "author" : [
+      "Tokuhiro Matsuno <tokuhirom AAJKLFJEF@ GMAIL COM>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Minilla/v0.3.2, CPAN::Meta::Converter version 2.130880",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Lingua-JA-Regular-Unicode",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "inc",
+         "share",
+         "eg",
+         "examples",
+         "author"
+      ]
+   },
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Data::Section::TestBase" : "0",
+            "Test::More" : "0.98"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "CPAN::Meta" : "0",
+            "CPAN::Meta::Prereqs" : "0",
+            "Module::Build" : "0.38"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Test::CPAN::Meta" : "0",
+            "Test::MinimumVersion" : "0.10108",
+            "Test::Pod" : "1.41",
+            "Test::Spellunker" : "v0.2.2"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Exporter" : "5.58",
+            "Filter::Util::Call" : "0",
+            "perl" : "5.008001"
+         }
+      }
+   },
+   "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/tokuhirom/Lingua-JA-Regular-Unicode/issues"
+      },
+      "homepage" : "https://github.com/tokuhirom/Lingua-JA-Regular-Unicode",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/tokuhirom/Lingua-JA-Regular-Unicode.git",
+         "web" : "https://github.com/tokuhirom/Lingua-JA-Regular-Unicode"
+      }
+   },
+   "version" : "0.10",
+   "x_contributors" : [
+      "tokuhirom <tokuhirom@d0d07461-0603-4401-acd4-de1884942a52>",
+      "Keiji, Yoshimi <walf443@gmail.com>",
+      "tokuhirom <tokuhirom@gmail.com>"
+   ]
+}

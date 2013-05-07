@@ -127,6 +127,8 @@ __END__
 
 =encoding utf8
 
+=for stopwords regularizer
+
 =head1 NAME
 
 Lingua::JA::Regular::Unicode - convert japanese chars.
