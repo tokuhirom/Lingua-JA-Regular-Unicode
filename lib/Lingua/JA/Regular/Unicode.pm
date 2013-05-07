@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use utf8;
 use 5.008001; # dankogai-san says "tr/// on 5.8.0 is buggy!"
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 use Exporter 'import';
 
 our @EXPORT = qw/ hiragana2katakana alnum_z2h alnum_h2z space_z2h katakana2hiragana katakana_h2z katakana_z2h space_h2z/;
