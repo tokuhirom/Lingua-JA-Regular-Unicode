@@ -25,7 +25,7 @@ my %args = (
 
     name            => 'Lingua-JA-Regular-Unicode',
     module_name     => 'Lingua::JA::Regular::Unicode',
-    allow_pure_perl => 0,
+    allow_pureperl => 0,
 
     script_files => [glob('script/*'), glob('bin/*')],
 
