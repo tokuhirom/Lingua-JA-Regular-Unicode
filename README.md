@@ -15,15 +15,15 @@ Lingua::JA::Regular::Unicode is regularizer.
 
 - alnum\_z2h
 
-    Convert alphabet, numbers and __symbols__ ZENKAKU to HANKAKU.
+    Convert alphabet, numbers and **symbols** ZENKAKU to HANKAKU.
 
-    Symbols contains __\>__, __<__.
+    Symbols contains **>**, **<**.
 
     Yes, it's bit strange. But so, this behaviour is needed by historical reason.
 
 - alnum\_h2z
 
-    Convert alphabet, numbers and __symbols__ HANKAKU to ZENKAKU.
+    Convert alphabet, numbers and **symbols** HANKAKU to ZENKAKU.
 
 - space\_z2h
 
@@ -83,7 +83,7 @@ Lingua::JA::Regular::Unicode is regularizer.
 
 # AUTHOR
 
-Tokuhiro Matsuno <tokuhirom AAJKLFJEF@ GMAIL COM>
+Tokuhiro Matsuno &lt;tokuhirom AAJKLFJEF@ GMAIL COM>
 
 # THANKS To
 
@@ -92,7 +92,7 @@ Tokuhiro Matsuno <tokuhirom AAJKLFJEF@ GMAIL COM>
 
 # SEE ALSO
 
-[Lingua::JA::Regular](http://search.cpan.org/perldoc?Lingua::JA::Regular)
+[Lingua::JA::Regular](https://metacpan.org/pod/Lingua::JA::Regular)
 
 # LICENSE
 

@@ -1,0 +1,6 @@
+name = "Lingua-JA-Regular-Unicode"
+# badges = ["travis"]
+authority="cpan:TOKUHIROM"
+
+module_maker="ModuleBuildTiny"
+
