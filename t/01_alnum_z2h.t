@@ -13,6 +13,6 @@ done_testing;
 __END__
 
 ===
---- input:    およよＡＢＣＤＥＦＧｂｆｅge１２３123＞＜
---- expected: およよABCDEFGbfege123123><
+--- input:    およよＡＢＣＤＥＦＧｂｆｅge１２３123＞＜’”
+--- expected: およよABCDEFGbfege123123><'"
 
