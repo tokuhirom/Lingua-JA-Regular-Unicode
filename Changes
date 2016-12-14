@@ -2,6 +2,12 @@ Revision history for Perl extension Lingua::JA::Regular::Unicode
 
 {{$NEXT}}
 
+0.13 2016-12-14T00:46:07Z
+
+    - Added replacement characters
+      \x{2019} and \x{201d}
+      (K)
+
 0.12 2013-05-07T05:05:56Z
 
     - Refactoring prereqs.

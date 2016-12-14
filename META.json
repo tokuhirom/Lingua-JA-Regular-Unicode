@@ -65,7 +65,7 @@
          "web" : "https://github.com/tokuhirom/Lingua-JA-Regular-Unicode"
       }
    },
-   "version" : "0.12",
+   "version" : "0.13",
    "x_authority" : "cpan:TOKUHIROM",
    "x_contributors" : [
       "tokuhirom <tokuhirom@d0d07461-0603-4401-acd4-de1884942a52>",

@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/tokuhirom/Lingua-JA-Regular-Unicode.svg?branch=master)](https://travis-ci.org/tokuhirom/Lingua-JA-Regular-Unicode) [![MetaCPAN Release](https://badge.fury.io/pl/Lingua-JA-Regular-Unicode.svg)](https://metacpan.org/release/Lingua-JA-Regular-Unicode)
 # NAME
 
 Lingua::JA::Regular::Unicode - convert japanese chars.
